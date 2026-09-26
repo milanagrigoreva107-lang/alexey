@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Контакты — Алексей Смирнов</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+body { font-family: 'Inter', system-ui, sans-serif; }
+</style>
+</head>
+<body class="bg-neutral-900 text-white min-h-screen flex flex-col">
+
+<!-- Меню -->
+<header class="border-b border-neutral-800">
+<nav class="max-w-5xl mx-auto flex flex-wrap items-center justify-between px-6 py-5">
+<a href="index.html" class="text-lg font-semibold tracking-wide">
+Алексей<span class="text-orange-400">.</span>
+</a>
+<ul class="flex gap-6 text-sm sm:text-base">
+<li><a href="index.html" class="text-neutral-300 hover:text-orange-400 transition">Главная</a></li>
+<li><a href="portfolio.html" class="text-neutral-300 hover:text-orange-400 transition">Портфолио</a></li>
+<li><a href="contacts.html" class="text-orange-400 font-medium hover:text-orange-300 transition">Контакты</a></li>
+</ul>
+</nav>
+</header>
+
+<!-- Контакты -->
+<main class="flex-1 max-w-5xl mx-auto px-6 py-16 w-full">
+<h1 class="text-3xl sm:text-5xl font-extrabold mb-4">Контакты</h1>
+<p class="text-neutral-400 mb-12 max-w-2xl">
+Свяжитесь со мной удобным способом — отвечаю в течение дня.
+</p>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+<!-- Список контактов -->
+<div class="space-y-6">
+<div>
+<p class="text-orange-400 text-sm uppercase tracking-widest mb-1">Телефон</p>
+<a href="tel:+79001234567" class="text-lg hover:text-orange-400 transition">+7 (900) 123-45-67</a>
+</div>
+<div>
+<p class="text-orange-400 text-sm uppercase tracking-widest mb-1">Email</p>
+<a href="mailto:hello@alexey-photo.ru" class="text-lg hover:text-orange-400 transition">hello@alexey-photo.ru</a>
+</div>
+<div>
+<p class="text-orange-400 text-sm uppercase tracking-widest mb-1">Instagram</p>
+<a href="https://instagram.com/" target="_blank" rel="noopener"
+class="text-lg hover:text-orange-400 transition">@alexey.photo</a>
+</div>
+</div>
+
+<!-- Форма -->
+<form class="space-y-5" onsubmit="event.preventDefault(); alert('Спасибо! Я свяжусь с вами в ближайшее время.');">
+<div>
+<label for="name" class="block text-sm text-neutral-400 mb-2">Имя</label>
+<input id="name" type="text" required
+class="w-full bg-neutral-800 border border-neutral-700 rounded-lg px-4 py-3 text-white placeholder-neutral-500 focus:outline-none focus:border-orange-400 transition"
+placeholder="Как к вам обращаться?">
+</div>
+<div>
+<label for="email" class="block text-sm text-neutral-400 mb-2">Email</label>
+<input id="email" type="email" required
+class="w-full bg-neutral-800 border border-neutral-700 rounded-lg px-4 py-3 text-white placeholder-neutral-500 focus:outline-none focus:border-orange-400 transition"
+placeholder="you@example.com">
+</div>
+<div>
+<label for="message" class="block text-sm text-neutral-400 mb-2">Сообщение</label>
+<textarea id="message" rows="5" required
+class="w-full bg-neutral-800 border border-neutral-700 rounded-lg px-4 py-3 text-white placeholder-neutral-500 focus:outline-none focus:border-orange-400 transition resize-none"
+placeholder="Расскажите о своей съёмке..."></textarea>
+</div>
+<button type="submit"
+class="w-full bg-orange-500 hover:bg-orange-400 text-neutral-900 font-semibold py-3 rounded-full transition shadow-lg shadow-orange-500/20">
+Отправить
+</button>
+</form>
+
+</div>
+</main>
+
+<footer class="border-t border-neutral-800 text-center text-neutral-500 text-sm py-6">
+© 2025 Алексей Смирнов. Все права защищены.
+</footer>
+
+</body>
+</html>

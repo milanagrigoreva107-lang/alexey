@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Услуги и цены — Алексей Смирнов</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+  </style>
+</head>
+<body class="bg-neutral-900 text-white min-h-screen flex flex-col">
+
+  <!-- Меню -->
+  <header class="border-b border-neutral-800 relative">
+    <nav class="max-w-5xl mx-auto px-6 py-5 flex items-center justify-between">
+
+      <a href="index.html" class="text-lg font-semibold tracking-wide z-10">
+        Алексей<span class="text-orange-400">.</span>
+      </a>
+
+      <button id="burger"
+              class="md:hidden text-neutral-300 hover:text-orange-400 focus:outline-none"
+              aria-label="Открыть меню">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+      <ul id="nav-menu"
+          class="hidden md:flex md:items-center md:gap-6
+                 absolute md:static top-full left-0 w-full md:w-auto
+                 bg-neutral-900 md:bg-transparent
+                 border-b border-neutral-800 md:border-none
+                 flex-col md:flex-row
+                 py-4 md:py-0 px-6 md:px-0
+                 space-y-4 md:space-y-0 md:space-x-6">
+        <li><a href="index.html" class="block text-neutral-300 hover:text-orange-400 transition">Главная</a></li>
+        <li><a href="portfolio.html" class="block text-neutral-300 hover:text-orange-400 transition">Портфолио</a></li>
+        <li><a href="services.html" class="block text-orange-400 font-medium hover:text-orange-300 transition">Услуги</a></li>
+        <li><a href="about.html" class="block text-neutral-300 hover:text-orange-400 transition">Обо мне</a></li>
+        <li><a href="contacts.html" class="block text-neutral-300 hover:text-orange-400 transition">Контакты</a></li>
+      </ul>
+
+    </nav>
+  </header>
+
+  <script>
+    const burger = document.getElementById('burger');
+    const navMenu = document.getElementById('nav-menu');
+    burger.addEventListener('click', () => {
+      navMenu.classList.toggle('hidden');
+      navMenu.classList.toggle('flex');
+    });
+  </script>
+
+  <!-- Контент -->
+  <main class="flex-1 max-w-5xl mx-auto px-6 py-16 w-full">
+
+    <h1 class="text-4xl sm:text-5xl font-extrabold mb-4">Услуги и цены</h1>
+    <p class="text-neutral-400 mb-12 max-w-2xl">
+      Выберите формат, который подходит именно вам. Все цены указаны «от» —
+      финальная стоимость зависит от локации, длительности и пожеланий.
+    </p>
+
+    <!-- Карточки услуг -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+      <!-- Свадебная съёмка -->
+      <div class="bg-neutral-800 rounded-2xl p-7 flex flex-col shadow-lg shadow-black/20 hover:shadow-orange-500/10 hover:-translate-y-1 transition">
+        <h2 class="text-xl font-bold mb-3">Свадебная съёмка</h2>
+        <p class="text-orange-400 text-3xl font-extrabold mb-6">от 60 000 ₽</p>
+        <ul class="space-y-2 text-neutral-300 text-sm mb-8 flex-1">
+          <li class="flex items-start gap-2"><span class="text-orange-400">✓</span> 8 часов съёмки</li>
+          <li class="flex items-start gap-2"><span class="text-orange-400">✓</span> 300+ обработанных фото</li>
+          <li class="flex items-start gap-2"><span class="text-orange-400">✓</span> Онлайн-галерея</li>
+        </ul>
+        <a href="contacts.html"
+           class="block text-center bg-orange-500 hover:bg-orange-400 text-neutral-900 font-semibold py-3 rounded-full transition">
+          Забронировать
+        </a>
+      </div>
+
+      <!-- Портретная съёмка -->
+      <div class="bg-neutral-800 rounded-2xl p-7 flex flex-col shadow-lg shadow-black/20 hover:shadow-orange-500/10 hover:-translate-y-1 transition">
+        <h2 class="text-xl font-bold mb-3">Портретная съёмка</h2>
+        <p class="text-orange-400 text-3xl font-extrabold mb-6">от 15 000 ₽</p>
+        <ul class="space-y-2 text-neutral-300 text-sm mb-8 flex-1">
+          <li class="flex items-start gap-2"><span class="text-orange-400">✓</span> 2 часа съёмки</li>
+          <li class="flex items-start gap-2"><span class="text-orange-400">✓</span> 50 обработанных фото</li>
+          <li class="flex items-start gap-2"><span class="text-orange-400">✓</span> Помощь с образами</li>
+        </ul>
+        <a href="contacts.html"
+           class="block text-center bg-orange-500 hover:bg-orange-400 text-neutral-900 font-semibold py-3 rounded-full transition">
+          Забронировать
+        </a>
+      </div>
+    
+
+      <!-- Love story -->
+      <div class="bg-neutral-800 rounded-2xl p-7 flex flex-col shadow-lg shadow-black/20 hover:shadow-orange-500/10 hover:-translate-y-1 transition">
+        <h2 class="text-xl font-bold mb-3">Love story</h2>
+        <p class="text-orange-400 text-3xl font-extrabold mb-6">от 25 000 ₽</p>
+        <ul class="space-y-2 text-neutral-300 text-sm mb-8 flex-1">
+          <li class="flex items-start gap-2"><span class="text-orange-400">✓</span> 3 часа съёмки</li>
+          <li class="flex items-start gap-2"><span class="text-orange-400">✓</span> 100 обработанных фото</li>
+          <li class="flex items-start gap-2"><span class="text-orange-400">✓</span> 2 локации</li>
+        </ul>
+        <a href="contacts.html"
+           class="block text-center bg-orange-500 hover:bg-orange-400 text-neutral-900 font-semibold py-3 rounded-full transition">
+          Забронировать
+        </a>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer class="border-t border-neutral-800 text-center text-neutral-500 text-sm py-6">
+    © 2025 Алексей Смирнов. Все права защищены.
+  </footer>
+
+</body>
+</html>-
